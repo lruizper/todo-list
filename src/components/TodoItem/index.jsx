@@ -1,8 +1,8 @@
-
+import './style.css';
 function TodoItem(props) {
     
     return ( 
-        <div> {props.text}</div>
+        <div className='todo'> {props.text}</div>
     )
 }
 

@@ -1,4 +1,5 @@
-import { useState } from "react";   
+import { useState } from "react";
+import './style.css';
 
 function TodoForm(props) {  
     const [value, setValue]= useState("");
@@ -9,7 +10,7 @@ function TodoForm(props) {
         setValue("");
     };
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="">
         <input 
         value={value}
         type="text"
