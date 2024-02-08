@@ -1,12 +1,18 @@
 import TodoItem from "./components/TodoItem"
-function App() {
+import { useState } from "react";
 
+function App() {
+  const [todo, setTodo] = useState(
+    ["do this first",
+    "get fuel",
+    "buy flowers",
+    "water the plants",]);
   return (
     <>
-    <h1>LRP to-do List</h1>
-    <TodoItem text= "do this first"/>
-    <TodoItem text= "petrol station" />
-    <TodoItem text= "buy flowers" />
+    <h1>My ReactJS To-do list </h1>
+    {todo.map( (todo, index) => (
+      <TodoItem key={index} text={todo} />
+    )  )}
     </>
   );
 }
