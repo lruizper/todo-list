@@ -11,3 +11,8 @@
 .todo:hover {
     background: #a2dcfc;
 }
+
+.complete {
+    text-decoration: line-through;
+    color: red;
+}
