@@ -20,8 +20,3 @@ function TodoForm(props) {
         </form>  );
     }
 export default TodoForm;
-
-let text='hello';
-if (value){text='value'}
-else {text='no value'}
-return (text='value')
