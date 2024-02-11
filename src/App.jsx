@@ -24,17 +24,25 @@ function App() {
       newTodo.splice(index, 1);
       setTodo(newTodo);
   };
+  const clearAll = () => {
+    setTodo([]);
+  };
+  
 
   return ( <div className="app">
                 <h1 className="todo-list">My ReactJS To-do list </h1>
+                <button onClick={clearAll}>Clear All</button>
                 {todo.map( (todo, index) => 
-                (<TodoItem 
-                key={index} 
-                todo={todo} 
-                completeTodo={() => completeTodo(index)}
-                removeTodo={() => removeTodo(index)}
-                />))}
+                  (<TodoItem 
+                  key={index} 
+                  todo={todo} 
+                  completeTodo={() => completeTodo(index)}
+                  removeTodo={() => removeTodo(index)}
+                  />))}
+                <div className="userInput"> 
                 <TodoForm addTodo={addTodo}/>
+                
+                </div>
             </div>
             );
 }
