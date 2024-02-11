@@ -15,9 +15,9 @@ function App() {
           setTodo(newTodo);
   };
   const completeTodo = (index) => {
-      const newTodo = [...todo];
-      newTodo[index].isCompleted = true;
-      setTodo(newTodo);
+    const newTodo = [...todo];
+    newTodo[index].isCompleted = !newTodo[index].isCompleted; // Toggle the value of isCompleted
+    setTodo(newTodo);
   };
   const removeTodo = (index) => {
       const newTodo = [...todo];
